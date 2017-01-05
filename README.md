@@ -1,2 +1,2 @@
 # UI-Events
-App for UI Events
+Webpage for UI Events
