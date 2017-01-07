@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>UI课评征集</title>
+	</head>
+	<script>
+ 
+  	function dsform(){
+		var num=document.getElementById("number"),
+		prof=document.getElementById("professor"),
+		aa=document.getElementById("aa"),
+		ab=document.getElementById("ab"),
+		ac=document.getElementById("ac"),
+		ad=document.getElementById("ad"),
+		ae=document.getElementById("ae"),
+		af=document.getElementById("af"),
+		qita=document.getElementById("qita"),
+		longtext=document.getElementById("longtext");
+
+		if(num.value==""){
+			alert("请填写课号");
+			return false;
+		}
+		else if(prof.value==""){
+			alert("请填写教授名字");
+			return false;
+		}
+		else if((!aa.checked && !ab.checked && !ac.checked && !ad.checked && !ae.checked && !af.checked) ||
+			(af.checked && qita.value=="")){
+			alert("请填写学期");
+			return false;
+		}
+		else if(longtext.value==""){
+			alert("请填写评价");
+			return false;
+		}
+		else{
+			alert("提交成功！");
+			return true;	
+		}
+  	}
+	</script>
+	<body>
+		<div id="header" style="background-color:#decff8;">
+			<h1 style="text-align:center;font-family:KaiTi;margin-bottom:0;">UI课评提交表格</h1>
+		</div>
+			<div id="menu" style="background-color:#eeeeff;height:1100px;width:200px;float:left;">
+				<h2>Menu</b></h2>
+				<a href="adv.html" style="color:blue">ADV</a><br>
+			</div>
+			<div id="content" style="background-color:#EEEEEE;height:1100px;width:1049px;float:left;">
+			<form onsubmit="return dsform()">
+			请先填写一下评价的课号 * <br>
+			<input type="text" name="课号" id="number" required="required"><br><br>
+			你在哪个学期修了这节课 * <br>
+				<input type="radio" name="term" value="fa16" id="aa">FA16  &nbsp
+				<input type="radio" name="term" value="sp16" id="ab">SP16  &nbsp
+				<input type="radio" name="term" value="fa15" id="ac">FA15  &nbsp
+				<input type="radio" name="term" value="sp15" id="ad">SP15  &nbsp
+				<input type="radio" name="term" value="fa14" id="ae">FA14  &nbsp
+				<input type="radio" name="term" value="其他" id="af">其他 
+				<input type="text" name="qita" id="qita">
+			<br><br>
+			教授的称呼是 * <br>
+			<input type="text" name="教授" id="professor"><br><br>
+
+			这节课的体验如何，你有什么样的评价？（推荐用120-150字回答） *
+			<div>
+				<textarea name="MSG" cols=60 rows=10 id="longtext"></textarea>
+			</div>
+			<br>
+			你对这节课各方面评分如何 *
+
+			<table border="1">
+				<tr>
+					<td></td>
+					<td style="text-align:center">    4    </td>
+					<td style="text-align:center">    3    </td>
+					<td style="text-align:center">    2    </td>
+					<td style="text-align:center">    1    </td>
+					<td style="text-align:center">    0    </td>
+				</tr>
+				<tr>
+					<td width=80pxs style="text-align:center">难度</td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice" value="4"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice" value="3"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice" value="2"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice" value="1"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice" value="0"></td>
+				</tr>
+				<tr>
+					<td style="text-align:center">教授</td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice1" value="4"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice1" value="3"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice1" value="2"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice1" value="1"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice1" value="0"></td>
+				</tr>
+				<tr>
+					<td style="text-align:center">实用</td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice2" value="4"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice2" value="3"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice2" value="2"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice2" value="1"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice2" value="0"></td>
+				</tr>
+				<tr>
+					<td style="text-align:center">趣味</td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice3" value="4"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice3" value="3"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice3" value="2"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice3" value="1"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice3" value="0"></td>
+				</tr>
+				<tr>
+					<td style="text-align:center">自学</td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice4" value="4"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice4" value="3"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice4" value="2"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice4" value="1"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice4" value="0"></td>
+				</tr>
+			</table><br>
+
+			在学期不同阶段，这节课的工作量趋势的大致感受 *
+
+			<table border="1">
+				<tr>
+					<td></td>
+					<td style="text-align:center">    4    </td>
+					<td style="text-align:center">    3    </td>
+					<td style="text-align:center">    2    </td>
+					<td style="text-align:center">    1    </td>
+					<td style="text-align:center">    0    </td>
+				</tr>
+				<tr>
+					<td width=100pxs style="text-align:center">wk 1 - 5</td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice5" value="4"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice5" value="3"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice5" value="2"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice5" value="1"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice5" value="0"></td>
+				</tr>
+				<tr>
+					<td style="text-align:center">wk 6 - 10</td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice6" value="4"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice6" value="3"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice6" value="2"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice6" value="1"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice6" value="0"></td>
+				</tr>
+				<tr>
+					<td style="text-align:center">wk 11 - 15</td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice7" value="4"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice7" value="3"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice7" value="2"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice7" value="1"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice7" value="0"></td>
+				</tr>
+				<tr>
+					<td style="text-align:center">final wk 期间</td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice8" value="4"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice8" value="3"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice8" value="2"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice8" value="1"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice8" value="0"></td>
+				</tr>
+			</table> <br>
+			你的微信号是？ * <br>
+			<input type="text" name="微信号"><br><br>
+
+			你想如何署名？ * <br>
+				<input type="radio" name="term" value="昵称">微信昵称 &nbsp
+				<input type="radio" name="term" value="匿名">匿名 &nbsp
+				<input type="radio" name="term" value="其他">其他 
+				<input type="text" name="other"><br><br>
+				<br><br>
+
+			可以显示你的头像吗? * <br>
+				<input type="radio" name="term" value="ke">可以，在评论右下角将显示我的微信头像。 <br>
+				<input type="radio" name="term" value="bu">不可以，使用灰色匿名头像
+			<br><br><br>
+			<input type="submit" value="提交">
+			</form> 
+
+			</div>
+			<div id="footer" style="background-color:#decff8;clear:both;text-align:center;">
+	Copyright © 2017 UI Events <a href="cover.html"><u>uicoursereview.com</u></a> All Rights Reserved.</div>
+	</body>
+</html>
