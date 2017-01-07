@@ -7,23 +7,32 @@
 	<script>
  
   	function dsform(){
-		var num=document.getElementById("number"),
-		prof=document.getElementById("professor"),
-		aa=document.getElementById("aa"),
-		ab=document.getElementById("ab"),
-		ac=document.getElementById("ac"),
-		ad=document.getElementById("ad"),
-		ae=document.getElementById("ae"),
-		af=document.getElementById("af"),
-		qita=document.getElementById("qita"),
-		longtext=document.getElementById("longtext");
+		var num=document.getElementById("number"), prof=document.getElementById("professor"), aa=document.getElementById("aa"),
+		ab=document.getElementById("ab"), ac=document.getElementById("ac"), ad=document.getElementById("ad"),
+		ae=document.getElementById("ae"), af=document.getElementById("af"), qita=document.getElementById("qita"), 
+		longtext=document.getElementById("longtext"), ba=document.getElementById("ba"), bb=document.getElementById("bb"),
+		bc=document.getElementById("bc"), bd=document.getElementById("bd"), be=document.getElementById("be"),
+		bf=document.getElementById("bf"), bg=document.getElementById("bg"), bh=document.getElementById("bh"),
+		bi=document.getElementById("bi"), bj=document.getElementById("bj"), bl=document.getElementById("bl"),
+		bm=document.getElementById("bm"), bn=document.getElementById("bn"), bo=document.getElementById("bo"),
+		bp=document.getElementById("bp"), bq=document.getElementById("bq"), br=document.getElementById("br"),
+		bs=document.getElementById("bs"), bt=document.getElementById("bt"), bu=document.getElementById("bu"),
+		bv=document.getElementById("bv"), bw=document.getElementById("bw"), bx=document.getElementById("bx"),
+		by=document.getElementById("by"), bz=document.getElementById("bz"),
+		ca=document.getElementById("ca"), cb=document.getElementById("cb"), cc=document.getElementById("cc"),
+		cd=document.getElementById("cd"), ce=document.getElementById("ce"), cf=document.getElementById("cf"),
+		cg=document.getElementById("cg"), ch=document.getElementById("ch"), ci=document.getElementById("ci"),
+		cj=document.getElementById("cj"), ck=document.getElementById("ck"), cl=document.getElementById("cl"),
+		cm=document.getElementById("cm"), cn=document.getElementById("cn"), co=document.getElementById("co"),
+		cp=document.getElementById("cp"), cq=document.getElementById("cq"), cr=document.getElementById("cr"),
+		cs=document.getElementById("cs"), ct=document.getElementById("ct"),
+		wechat=document.getElementById("wechat"),
+		da=document.getElementById("da"), db=document.getElementById("db"), dc=document.getElementById("dc"),
+		dd=document.getElementById("dd"),
+		ok=document.getElementById("ok"), no=document.getElementById("no");
 
 		if(num.value==""){
 			alert("请填写课号");
-			return false;
-		}
-		else if(prof.value==""){
-			alert("请填写教授名字");
 			return false;
 		}
 		else if((!aa.checked && !ab.checked && !ac.checked && !ad.checked && !ae.checked && !af.checked) ||
@@ -31,8 +40,42 @@
 			alert("请填写学期");
 			return false;
 		}
+		else if(prof.value==""){
+			alert("请填写教授名字");
+			return false;
+		}
 		else if(longtext.value==""){
 			alert("请填写评价");
+			return false;
+		}
+		else if(  (!ba.checked && !bb.checked && !bc.checked && !bd.checked && !be.checked)  
+				|| (!bf.checked && !bg.checked && !bh.checked && !bi.checked && !bj.checked)
+				|| (!bl.checked && !bm.checked && !bn.checked && !bo.checked && !bp.checked)
+				|| (!bq.checked && !br.checked && !bs.checked && !bt.checked && !bu.checked)
+				|| (!bv.checked && !bw.checked && !bx.checked && !by.checked && !bz.checked)
+				){
+			alert("请填写各项评分");
+			return false;
+		}
+		else if(  (!ca.checked && !cb.checked && !cc.checked && !cd.checked && !ce.checked)  
+				|| (!cf.checked && !cg.checked && !ch.checked && !ci.checked && !cj.checked)
+				|| (!ck.checked && !cl.checked && !cm.checked && !cn.checked && !co.checked)
+				|| (!cp.checked && !cq.checked && !cr.checked && !cs.checked && !ct.checked)
+				){
+			alert("请填写工作量评分");
+			return false;
+		}
+		else if(wechat.value==""){
+			alert("请填写微信号");
+			return false;
+		}
+		else if((!da.checked && !db.checked && !dc.checked) ||
+			(dc.checked && dd.value=="")){
+			alert("请填写署名选项");
+			return false;
+		}
+		else if(!ok.checked && !no.checked){
+			alert("请填写是否显示头像");
 			return false;
 		}
 		else{
@@ -51,9 +94,9 @@
 			</div>
 			<div id="content" style="background-color:#EEEEEE;height:1100px;width:1049px;float:left;">
 			<form onsubmit="return dsform()">
-			请先填写一下评价的课号 * <br>
+			请先填写一下评价的课号  * <br>
 			<input type="text" name="课号" id="number" required="required"><br><br>
-			你在哪个学期修了这节课 * <br>
+			你在哪个学期修了这节课  * <br>
 				<input type="radio" name="term" value="fa16" id="aa">FA16  &nbsp
 				<input type="radio" name="term" value="sp16" id="ab">SP16  &nbsp
 				<input type="radio" name="term" value="fa15" id="ac">FA15  &nbsp
@@ -62,7 +105,7 @@
 				<input type="radio" name="term" value="其他" id="af">其他 
 				<input type="text" name="qita" id="qita">
 			<br><br>
-			教授的称呼是 * <br>
+			教授的称呼是  * <br>
 			<input type="text" name="教授" id="professor"><br><br>
 
 			这节课的体验如何，你有什么样的评价？（推荐用120-150字回答） *
@@ -70,7 +113,7 @@
 				<textarea name="MSG" cols=60 rows=10 id="longtext"></textarea>
 			</div>
 			<br>
-			你对这节课各方面评分如何 *
+			你对这节课各方面评分如何  *
 
 			<table border="1">
 				<tr>
@@ -83,43 +126,43 @@
 				</tr>
 				<tr>
 					<td width=80pxs style="text-align:center">难度</td>
-					<td width=80pxs style="text-align:center"><input type="radio" name="choice" value="4"></td>
-					<td width=80pxs style="text-align:center"><input type="radio" name="choice" value="3"></td>
-					<td width=80pxs style="text-align:center"><input type="radio" name="choice" value="2"></td>
-					<td width=80pxs style="text-align:center"><input type="radio" name="choice" value="1"></td>
-					<td width=80pxs style="text-align:center"><input type="radio" name="choice" value="0"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice" value="4" id="ba"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice" value="3" id="bb"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice" value="2" id="bc"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice" value="1" id="bd"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice" value="0" id="be"></td>
 				</tr>
 				<tr>
 					<td style="text-align:center">教授</td>
-					<td width=80pxs style="text-align:center"><input type="radio" name="choice1" value="4"></td>
-					<td width=80pxs style="text-align:center"><input type="radio" name="choice1" value="3"></td>
-					<td width=80pxs style="text-align:center"><input type="radio" name="choice1" value="2"></td>
-					<td width=80pxs style="text-align:center"><input type="radio" name="choice1" value="1"></td>
-					<td width=80pxs style="text-align:center"><input type="radio" name="choice1" value="0"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice1" value="4" id="bf"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice1" value="3" id="bg"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice1" value="2" id="bh"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice1" value="1" id="bi"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice1" value="0" id="bj"></td>
 				</tr>
 				<tr>
 					<td style="text-align:center">实用</td>
-					<td width=80pxs style="text-align:center"><input type="radio" name="choice2" value="4"></td>
-					<td width=80pxs style="text-align:center"><input type="radio" name="choice2" value="3"></td>
-					<td width=80pxs style="text-align:center"><input type="radio" name="choice2" value="2"></td>
-					<td width=80pxs style="text-align:center"><input type="radio" name="choice2" value="1"></td>
-					<td width=80pxs style="text-align:center"><input type="radio" name="choice2" value="0"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice2" value="4" id="bl"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice2" value="3" id="bm"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice2" value="2" id="bn"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice2" value="1" id="bo"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice2" value="0" id="bp"></td>
 				</tr>
 				<tr>
 					<td style="text-align:center">趣味</td>
-					<td width=80pxs style="text-align:center"><input type="radio" name="choice3" value="4"></td>
-					<td width=80pxs style="text-align:center"><input type="radio" name="choice3" value="3"></td>
-					<td width=80pxs style="text-align:center"><input type="radio" name="choice3" value="2"></td>
-					<td width=80pxs style="text-align:center"><input type="radio" name="choice3" value="1"></td>
-					<td width=80pxs style="text-align:center"><input type="radio" name="choice3" value="0"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice3" value="4" id="bq"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice3" value="3" id="br"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice3" value="2" id="bs"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice3" value="1" id="bt"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice3" value="0" id="bu"></td>
 				</tr>
 				<tr>
 					<td style="text-align:center">自学</td>
-					<td width=80pxs style="text-align:center"><input type="radio" name="choice4" value="4"></td>
-					<td width=80pxs style="text-align:center"><input type="radio" name="choice4" value="3"></td>
-					<td width=80pxs style="text-align:center"><input type="radio" name="choice4" value="2"></td>
-					<td width=80pxs style="text-align:center"><input type="radio" name="choice4" value="1"></td>
-					<td width=80pxs style="text-align:center"><input type="radio" name="choice4" value="0"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice4" value="4" id="bv"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice4" value="3" id="bw"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice4" value="2" id="bx"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice4" value="1" id="by"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice4" value="0" id="bz"></td>
 				</tr>
 			</table><br>
 
@@ -136,50 +179,50 @@
 				</tr>
 				<tr>
 					<td width=100pxs style="text-align:center">wk 1 - 5</td>
-					<td width=80pxs style="text-align:center"><input type="radio" name="choice5" value="4"></td>
-					<td width=80pxs style="text-align:center"><input type="radio" name="choice5" value="3"></td>
-					<td width=80pxs style="text-align:center"><input type="radio" name="choice5" value="2"></td>
-					<td width=80pxs style="text-align:center"><input type="radio" name="choice5" value="1"></td>
-					<td width=80pxs style="text-align:center"><input type="radio" name="choice5" value="0"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice5" value="4" id="ca"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice5" value="3" id="cb"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice5" value="2" id="cc"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice5" value="1" id="cd"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice5" value="0" id="ce"></td>
 				</tr>
 				<tr>
 					<td style="text-align:center">wk 6 - 10</td>
-					<td width=80pxs style="text-align:center"><input type="radio" name="choice6" value="4"></td>
-					<td width=80pxs style="text-align:center"><input type="radio" name="choice6" value="3"></td>
-					<td width=80pxs style="text-align:center"><input type="radio" name="choice6" value="2"></td>
-					<td width=80pxs style="text-align:center"><input type="radio" name="choice6" value="1"></td>
-					<td width=80pxs style="text-align:center"><input type="radio" name="choice6" value="0"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice6" value="4" id="cf"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice6" value="3" id="cg"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice6" value="2" id="ch"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice6" value="1" id="ci"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice6" value="0" id="cj"></td>
 				</tr>
 				<tr>
 					<td style="text-align:center">wk 11 - 15</td>
-					<td width=80pxs style="text-align:center"><input type="radio" name="choice7" value="4"></td>
-					<td width=80pxs style="text-align:center"><input type="radio" name="choice7" value="3"></td>
-					<td width=80pxs style="text-align:center"><input type="radio" name="choice7" value="2"></td>
-					<td width=80pxs style="text-align:center"><input type="radio" name="choice7" value="1"></td>
-					<td width=80pxs style="text-align:center"><input type="radio" name="choice7" value="0"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice7" value="4" id="ck"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice7" value="3" id="cl"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice7" value="2" id="cm"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice7" value="1" id="cn"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice7" value="0" id="co"></td>
 				</tr>
 				<tr>
 					<td style="text-align:center">final wk 期间</td>
-					<td width=80pxs style="text-align:center"><input type="radio" name="choice8" value="4"></td>
-					<td width=80pxs style="text-align:center"><input type="radio" name="choice8" value="3"></td>
-					<td width=80pxs style="text-align:center"><input type="radio" name="choice8" value="2"></td>
-					<td width=80pxs style="text-align:center"><input type="radio" name="choice8" value="1"></td>
-					<td width=80pxs style="text-align:center"><input type="radio" name="choice8" value="0"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice8" value="4" id="cp"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice8" value="3" id="cq"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice8" value="2" id="cr"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice8" value="1" id="cs"></td>
+					<td width=80pxs style="text-align:center"><input type="radio" name="choice8" value="0" id="ct"></td>
 				</tr>
 			</table> <br>
 			你的微信号是？ * <br>
-			<input type="text" name="微信号"><br><br>
+			<input type="text" name="微信号" id="wechat"><br><br>
 
 			你想如何署名？ * <br>
-				<input type="radio" name="term" value="昵称">微信昵称 &nbsp
-				<input type="radio" name="term" value="匿名">匿名 &nbsp
-				<input type="radio" name="term" value="其他">其他 
-				<input type="text" name="other"><br><br>
+				<input type="radio" name="term" value="昵称" id="da">微信昵称 &nbsp
+				<input type="radio" name="term" value="匿名" id="db">匿名 &nbsp
+				<input type="radio" name="term" value="其他" id="dc">其他 
+				<input type="text" name="other" id="dd">
 				<br><br>
 
-			可以显示你的头像吗? * <br>
-				<input type="radio" name="term" value="ke">可以，在评论右下角将显示我的微信头像。 <br>
-				<input type="radio" name="term" value="bu">不可以，使用灰色匿名头像
+			可以显示你的头像吗?  * <br>
+				<input type="radio" name="keno" value="ke" id="ok">可以，在评论右下角将显示我的微信头像。 <br>
+				<input type="radio" name="keno" value="bu" id="no">不可以，使用灰色匿名头像
 			<br><br><br>
 			<input type="submit" value="提交">
 			</form> 
