@@ -16,7 +16,6 @@ window.onload = function () {
     for (var i = 0; i < semesterSelector.length; i++) {
         select (semesterSelector[i]);
     }
-    // select (semesterSelector[0]);
     for (var i = 0; i < semesterSelector.length; i++) {
         semesterSelector[i].onclick = function() {
             select (this);
@@ -27,7 +26,7 @@ window.onload = function () {
             return false;
         }
     }
-}
+};
 
 function displayCourse(tab) {
     for (var i = 0; i < tabsList.length; i++) {

@@ -1,0 +1,145 @@
+html {
+	margin: 5px;
+	padding: 5px;
+}
+
+body {
+	font-family: 'Hiragino Sans GB', 'STXihei', serif;
+}
+
+p {
+	clear: both;
+}
+
+/* header */
+
+header > section {
+	width: 750px;
+	height: 200px;
+	margin: auto;
+}
+
+header > section > div {
+	/* headings */
+	width: 550px;
+	display: block;
+	float: right;
+}
+
+#edition {
+	text-align: right;
+	font-size: 12px;
+	letter-spacing: 1px;
+}
+
+h1 {
+	font-size: 36px;
+	text-align: left;
+	padding-left: 60px;
+}
+
+/* nav */
+
+nav {
+	display: block;
+	width: 750px;
+	margin: auto;
+}
+
+nav .main_tab {
+	letter-spacing: 2px;
+    margin: 0;
+	padding: 10px 0;
+    display: block;
+	width: 150px;
+	text-align: center;
+	float: left;
+	background-color: #eee;
+}
+
+nav .main_tab_chosen {
+	background-color: white;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+nav .main_tab:hover, .main_tab.active{
+    background: white;
+    cursor: pointer;
+}
+
+/* main */
+
+main {
+	margin: auto;
+	width: 750px;
+	position: relative;
+	top: 50px;
+	display: block;
+	clear: none;
+}
+
+/* category */
+
+#gened_category {
+	display: block;
+	width: 450px;
+	margin: 0px;
+	padding: 0px;
+}
+
+#gened_category > div {
+	width: 225px;
+	margin: 0px;
+	padding: 0px;
+	clear: none;
+	float: left;
+}
+
+/* course */
+
+#gened_course {
+	display: block;
+	width: 300px;
+	float: right;
+	position: relative;
+	margin: auto 0;
+	padding: auto 0;
+}
+
+#gened_course > ul {
+	padding: 0;
+	margin: 0;
+}
+
+#gened_course > ul > li {
+	font-size: 12px;
+	width: 300px;
+	height: 25px;
+	text-align: center;
+	clear: none;
+	float: left;
+	display: block;
+	padding: 5 0 0 0;
+	margin: 0;
+	background-color: #eeeeee;
+}
+
+#gened_course a {
+	color: black;
+}
+
+/* footer */
+
+footer {
+	display: block;
+	clear: both;
+	position: relative;
+	left: -75px;
+	text-align: center;
+	font-size: 12px;
+	top: 10px;
+}

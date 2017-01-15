@@ -17,7 +17,7 @@ header > section {
 	width: 750px;
 	height: 200px;
 	margin: auto;
-	border-bottom: 2px solid #c8c8c8;
+	border-bottom: 2px solid #979797;
 }
 
 header > section > div {
@@ -50,8 +50,10 @@ h1 {
 /* main */
 
 main {
+	margin: auto;
 	width: 750px;
-	margin: 15px auto;
+	position: relative;
+	top: 25px;
 }
 
 /* nav */
@@ -78,7 +80,7 @@ main {
 }
 
 #tabs > ul{
-    margin: 0;
+    margin: 30px 0;
     padding: 0;
 }
 
@@ -114,7 +116,6 @@ main {
     background: white;
     padding: 10px 10px 25px;
     margin: 0;
-	color: #333;
 }
 
 /* contents: header */
@@ -126,9 +127,13 @@ h2 {
 .brief {
 	display: block;
 	font-size: 12px;
-	color: #444;
+	color: #4A4A4A;
 	float: left;
 	margin-top: 0;
+	clear: both;
+}
+
+ul {
 	clear: both;
 }
 
@@ -163,7 +168,7 @@ h2 {
     color: black;
 }
 
-#contents .active{
+#contents li:hover, #contents .active{
     background: #c8c8c8;
     cursor: pointer;
 }
@@ -185,7 +190,15 @@ h3 {
 	float: right;
 	font-size: 14px;
 	margin: 10px;
-	padding: 0 10px;
+	padding: 0;
+}
+
+.writer {
+	float: right;
+	font-weight: bold;
+	font-size: 14px;
+	margin: 10px;
+	padding: 0 10 0 0px;
 }
 
 /* aside */
@@ -198,7 +211,11 @@ aside {
 /* footer */
 
 footer {
+	display: block;
 	clear: both;
+	position: relative;
+	left: -75px;
+	top: 10px;
 	text-align: center;
 	font-size: 12px;
 }
