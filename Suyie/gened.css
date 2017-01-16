@@ -86,6 +86,7 @@ main {
 
 #gened_category {
 	display: block;
+	height: 600px;
 	width: 450px;
 	margin: 0px;
 	padding: 0px;
@@ -104,10 +105,13 @@ main {
 #gened_course {
 	display: block;
 	width: 300px;
+	height: 600px;
 	float: right;
 	position: relative;
 	margin: auto 0;
 	padding: auto 0;
+	background-color: #eeeeee;
+	overflow: scroll;
 }
 
 #gened_course > ul {
@@ -118,14 +122,14 @@ main {
 #gened_course > ul > li {
 	font-size: 12px;
 	width: 300px;
-	height: 25px;
+	/*height: 25px;*/
+	line-height: 25px;
 	text-align: center;
 	clear: none;
 	float: left;
 	display: block;
 	padding: 5 0 0 0;
 	margin: 0;
-	background-color: #eeeeee;
 }
 
 #gened_course a {
@@ -141,5 +145,5 @@ footer {
 	left: -75px;
 	text-align: center;
 	font-size: 12px;
-	top: 10px;
+	top: 50px;
 }
